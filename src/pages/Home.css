@@ -1,0 +1,615 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont;
+  background: #ffffff;
+  color: #111827;
+  overflow-x: hidden;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 24px;
+}
+
+.hero-content {
+  max-width: 760px;
+  text-align: center;
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.15;
+  color: #7a0d0d;
+}
+
+.hero-content h1 span {
+  color: #7db61c;
+}
+
+.hero-content p {
+  margin-top: 22px;
+  font-size: 18px;
+  line-height: 1.75;
+  color: #6b7280;
+}
+
+/* HERO BUTTONS */
+.hero-actions {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 14px 34px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #7db61c;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: #7a0d0d;
+  color: #ffffff;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= FLOATING BOOKS ================= */
+
+.floating-books {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  pointer-events: none;
+}
+
+.floating-books img {
+  width: 130px;
+  opacity: 0.95;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-books img:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.floating-books.left {
+  left: 40px;
+}
+
+.floating-books.right {
+  right: 40px;
+}
+
+/* ================= CONTAINER ================= */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 24px;
+}
+
+/* ================= SECTION TITLES ================= */
+
+.section-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 52px;
+}
+
+/* ================= BOOK GRID ================= */
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 34px;
+}
+
+.book-card {
+  position: relative;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  text-align: center;
+}
+
+.book-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
+}
+
+.book-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* TAG */
+.book-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #111827;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.book-card h3 {
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.book-meta {
+  display: flex;
+  justify-content: space-between;
+  margin: 14px 0 18px;
+}
+
+.book-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #7a0d0d;
+}
+
+.book-city {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* BUTTON OUTLINE */
+.btn-outline {
+  display: inline-block;
+  padding: 10px 26px;
+  border-radius: 999px;
+  border: 2px solid #7db61c;
+  color: #7db61c;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #7db61c;
+  color: #ffffff;
+}
+
+/* ================= DEMAND POSTERS ================= */
+
+.demand-section {
+  padding-bottom: 0;
+}
+
+.demand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.demand-poster {
+  padding: 48px;
+  border-radius: 32px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+.demand-poster h3 {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.demand-poster p {
+  margin-top: 16px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.demand-poster.primary {
+  background: linear-gradient(135deg, #7a0d0d, #a31616);
+  color: #ffffff;
+}
+
+.demand-poster.secondary {
+  background: linear-gradient(135deg, #7db61c, #a3d635);
+  color: #111827;
+}
+
+.poster-btn {
+  margin-top: 26px;
+  align-self: flex-start;
+  padding: 14px 30px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.poster-btn.light {
+  background: #ffffff;
+  color: #7a0d0d;
+}
+
+.poster-btn.dark {
+  background: #111827;
+  color: #ffffff;
+}
+
+/* ================= COUPON & HURRY ================= */
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  padding-bottom: 90px;
+}
+
+.coupon-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 44px;
+  border: 2px dashed #7db61c;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.coupon-card h3 {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.coupon-card p {
+  margin-top: 14px;
+  color: #6b7280;
+}
+
+.coupon-code {
+  margin-top: 22px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  background: #f0fdf4;
+  color: #166534;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  display: inline-block;
+}
+
+.coupon-btn {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 999px;
+  background: #7db61c;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* HURRY POSTER */
+.hurry-poster {
+  background: linear-gradient(135deg, #111827, #1f2933);
+  color: #ffffff;
+  border-radius: 32px;
+  padding: 48px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+}
+
+.hurry-poster h3 {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.hurry-poster p {
+  margin-top: 18px;
+  color: #d1d5db;
+}
+
+.hurry-btn {
+  margin-top: 28px;
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #111827;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ================= HOW IT WORKS ================= */
+
+.how-it-works .steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.step-card {
+  background: #ffffff;
+  padding: 34px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+.step-card span {
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #7db61c;
+  color: #ffffff;
+  border-radius: 50%;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .floating-books {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 44px;
+  }
+}
+/* ================= REVIEWS ================= */
+
+.reviews-slider {
+  overflow: hidden;
+}
+
+.reviews-grid {
+  display: flex;
+  gap: 30px;
+  animation: slideReviews 25s linear infinite;
+}
+
+@keyframes slideReviews {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.review-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 22px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+}
+
+.review-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.review-user {
+  display: flex;
+  align-items: center;
+  margin-top: 22px;
+  gap: 14px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #7db61c;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.review-user h4 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.review-user span {
+  font-size: 13px;
+  color: #6b7280;
+}
+.stars {
+  margin-bottom: 12px;
+}
+
+.star {
+  font-size: 16px;
+  color: #d1d5db;
+}
+
+.star.filled {
+  color: #f59e0b;
+}
+.sticky-cta {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111827;
+  color: #ffffff;
+  padding: 14px 22px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+}
+
+.sticky-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: #7db61c;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+/* CONTACT SECTION */
+.contact-section {
+  padding: 80px 0;
+  background: #f9fafb;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* FORM */
+.contact-form h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.contact-form p {
+  color: #6b7280;
+  margin-bottom: 30px;
+  max-width: 420px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #7db61c;
+}
+
+.btn-primary.full {
+  width: 100%;
+  padding: 14px;
+  font-size: 15px;
+}
+
+/* HELP CARDS */
+.help-cards {
+  display: grid;
+  gap: 20px;
+}
+
+.help-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.help-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.help-card p {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.help-card span {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

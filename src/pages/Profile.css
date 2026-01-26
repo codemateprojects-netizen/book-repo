@@ -1,0 +1,239 @@
+.profile {
+  min-height: 100vh;
+  background: #f7f9fc;
+  padding: 40px 16px;
+}
+
+.profileContainer {
+  max-width: 950px;
+  margin: auto;
+}
+
+/* Header */
+.profileHeader {
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+  border-radius: 22px;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+}
+
+.profileHeader h1 {
+  margin: 0;
+}
+
+.profileHeader p {
+  opacity: 0.9;
+  margin: 3px 0 0;
+}
+
+/* Email badge */
+.verifyBadge {
+  display: inline-block;
+  margin-top: 6px;
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.tabs button {
+  border: 1px solid #d1d5db;
+  background: #fff;
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.tabs button.active {
+  background: #22c55e;
+  color: #fff;
+  border-color: #22c55e;
+}
+
+.tabs button:hover {
+  background: #f3f4f6;
+}
+
+/* Card */
+.profileCard {
+  background: #fff;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.08);
+}
+
+/* Info rows */
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.infoRow span {
+  font-weight: 600;
+  color: #374151;
+}
+
+.infoRow p {
+  margin: 0;
+  color: #6b7280;
+}
+
+/* Skills */
+.skills {
+  margin-top: 18px;
+}
+
+.skills span {
+  font-weight: 600;
+  color: #374151;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.tag {
+  background: #e0f2fe;
+  color: #0284c7;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Buttons */
+.editBtn {
+  margin-top: 20px;
+  width: 100%;
+  background: #22c55e;
+  color: #fff;
+  padding: 12px;
+  border-radius: 14px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.editBtn:hover {
+  background: #16a34a;
+}
+
+.saveBtn {
+  background: #22c55e;
+  color: #fff;
+  border-radius: 12px;
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  background: #fee2e2;
+  color: #dc2626;
+  border-radius: 12px;
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Form */
+.editForm {
+  display: grid;
+  gap: 14px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.inputGroup input {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+}
+
+.formBtns {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* Activity */
+.activityList h3 {
+  margin-top: 0;
+}
+
+.activityList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.activityList li {
+  padding: 12px 14px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Verification */
+.verifyBox {
+  text-align: center;
+}
+
+.verifyBox p {
+  color: #6b7280;
+}
+
+.verified {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .profileHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+}

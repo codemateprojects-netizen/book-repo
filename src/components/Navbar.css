@@ -1,0 +1,74 @@
+.navbar {
+  height: 74px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 36px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* LOGO — DO NOT STYLE COLORS */
+.logo img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* LINKS */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 10px;
+  transition: background .2s ease, color .2s ease;
+}
+
+.nav-links a:hover {
+  background: #F3F4F6;
+  color: #6A0F0F;
+}
+
+/* SELL CTA */
+.sell-btn {
+  padding: 8px 18px;
+  border-radius: 20px;
+ background: linear-gradient(135deg, #7BAE23, #5F8F1D);
+  color: #000;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.sell-btn:hover {
+  animation: glowPulse 1.5s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    box-shadow: 
+      0 0 8px rgba(160, 255, 180, 0.6),
+      0 0 18px rgba(160, 255, 180, 0.4);
+  }
+  to {
+    box-shadow: 
+      0 0 16px rgba(160, 255, 180, 1),
+      0 0 40px rgba(160, 255, 180, 0.7);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* hamburger later */
+  }
+}
